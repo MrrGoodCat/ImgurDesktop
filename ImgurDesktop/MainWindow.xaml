@@ -7,6 +7,46 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <!--<WrapPanel>
+            <ListView x:Name="ContentListBox">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="150"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="225" MinHeight="225"/>
+                                <RowDefinition Height="10" MinHeight="20"/>
+                            </Grid.RowDefinitions>
+                            <Image Source="{Binding Img}" Grid.RowSpan="1"/>
+                            <Label Content="{Binding Name}" Grid.RowSpan="2" VerticalAlignment="Bottom"/>
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </WrapPanel>-->
+
+        <ListBox x:Name="ContentListBox" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+           
+            <ListBox.ItemTemplate>
+                
+                <DataTemplate>
+                    
+                    <Grid>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="150"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="225" MinHeight="225"/>
+                            <RowDefinition Height="10" MinHeight="20"/>
+                        </Grid.RowDefinitions>
+                        <Image Source="{Binding Img}" Grid.RowSpan="1"/>
+                        <Label Content="{Binding Name}" Grid.RowSpan="2" VerticalAlignment="Bottom"/>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox> 
     </Grid>
 </Window>
